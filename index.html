@@ -74,10 +74,7 @@
             font-family: 'Sora', sans-serif;
             font-size: 28px;
             font-weight: 800;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #004898;
         }
 
         .nav-links {
@@ -648,13 +645,29 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .app-logo {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">VasoolBook</div>
+            <div class="logo-box">
+                <img src="vb.png" alt="Logo" class="app-logo">
+                <div class="logo">VasoolBook</div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#why">Why Choose</a></li>
@@ -705,7 +718,7 @@
                     <p>Languages</p>
                 </div>
                 <div class="stat-item">
-                    <h3>4.8★</h3>
+                    <h3>4.95★</h3>
                     <p>User Rating</p>
                 </div>
             </div>
