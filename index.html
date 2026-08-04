@@ -613,6 +613,20 @@
         }
 
         @media (max-width: 640px) {
+            .logo {
+                font-size: 20px;
+            }
+
+            .app-logo {
+                width: 36px;
+                height: 36px;
+            }
+
+            .cta-button {
+                padding: 10px 18px;
+                font-size: 14px;
+            }
+
             .hero h1 {
                 font-size: 32px;
             }
@@ -659,6 +673,334 @@
             height: 45px;
             border-radius: 50%;
         }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .billing-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin: 0 auto 50px;
+            background: white;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 50px;
+            padding: 5px;
+            width: max-content;
+        }
+
+        .billing-toggle button {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            background: transparent;
+            color: var(--gray);
+            padding: 10px 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.25s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .billing-toggle button.active {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 4px 15px rgba(15, 124, 144, 0.3);
+        }
+
+        .save-pill {
+            background: rgba(255, 107, 53, 0.15);
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+
+        .billing-toggle button.active .save-pill {
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 30px;
+            align-items: stretch;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: white;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 22px;
+            padding: 38px 32px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(15, 124, 144, 0.15);
+        }
+
+        .price-card.popular {
+            border: 2px solid var(--primary);
+            box-shadow: 0 15px 45px rgba(15, 124, 144, 0.18);
+        }
+
+        .popular-tag {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-accent);
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 5px 18px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            white-space: nowrap;
+        }
+
+        .price-card .plan-name {
+            font-family: 'Sora', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .price-card .plan-desc {
+            color: var(--gray);
+            font-size: 14.5px;
+            margin-bottom: 22px;
+            min-height: 44px;
+        }
+
+        .price-line {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            margin-bottom: 4px;
+        }
+
+        .price-amount {
+            font-family: 'Sora', sans-serif;
+            font-size: 44px;
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1;
+        }
+
+        .price-period { color: var(--gray); font-size: 16px; font-weight: 500; }
+
+        .price-note {
+            font-size: 13.5px;
+            color: var(--gray);
+            min-height: 21px;
+            margin-bottom: 24px;
+        }
+
+        .price-note .save-txt { color: #16A34A; font-weight: 700; }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 28px;
+            flex: 1;
+        }
+
+        .plan-features li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            padding: 7px 0;
+            font-size: 15px;
+            color: #334155;
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            color: #16A34A;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .plan-features li.inherit {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .plan-features li.inherit::before { content: '★'; color: var(--accent); }
+
+        .plan-cta {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 14px 20px;
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .plan-cta:hover { background: var(--primary); color: white; }
+
+        .price-card.popular .plan-cta {
+            background: var(--gradient);
+            border-color: transparent;
+            color: white;
+            box-shadow: 0 6px 20px rgba(15, 124, 144, 0.35);
+        }
+
+        .price-card.popular .plan-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(15, 124, 144, 0.45); }
+
+        .pricing-footnote {
+            text-align: center;
+            color: var(--gray);
+            font-size: 14.5px;
+            margin-top: 34px;
+        }
+
+        .pricing-footnote a { color: var(--primary); font-weight: 600; }
+
+        /* Plan comparison table */
+        .compare-wrap {
+            max-width: 1080px;
+            margin: 60px auto 0;
+            background: white;
+            border: 1px solid #E2E8F0;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .compare-scroll { overflow-x: auto; }
+
+        .compare-wrap h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            padding: 26px 30px 6px;
+        }
+
+        .compare-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 640px;
+            font-size: 15px;
+        }
+
+        .compare-wrap th {
+            background: var(--dark-blue);
+            color: white;
+            padding: 14px 18px;
+            text-align: center;
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+        }
+
+        .compare-wrap th:first-child { text-align: left; }
+
+        .compare-wrap td {
+            padding: 12px 18px;
+            border-top: 1px solid #EEF2F6;
+            text-align: center;
+            color: #334155;
+        }
+
+        .compare-wrap td:first-child { text-align: left; }
+        .compare-wrap tbody tr:nth-child(even) { background: #F8FAFB; }
+        .compare-wrap .yes { color: #16A34A; font-weight: 800; }
+        .compare-wrap .no { color: #CBD5E1; font-weight: 700; }
+        .compare-wrap .price-row td { font-weight: 700; color: var(--dark); }
+
+        /* Guide banner */
+        .guide-banner {
+            background: white;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 22px;
+            padding: 44px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 30px;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 1080px;
+            box-shadow: 0 10px 35px rgba(15, 124, 144, 0.08);
+        }
+
+        .guide-banner h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .guide-banner p { color: var(--gray); max-width: 560px; }
+
+        .guide-langs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .guide-langs a {
+            text-decoration: none;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--primary);
+            background: rgba(15, 124, 144, 0.08);
+            border-radius: 50px;
+            padding: 5px 14px;
+            transition: all 0.2s;
+        }
+
+        .guide-langs a:hover { background: var(--primary); color: white; }
+
+        .guide-banner .btn-guide {
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 17px;
+            padding: 16px 36px;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(15, 124, 144, 0.35);
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .guide-banner .btn-guide:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(15, 124, 144, 0.45); }
+
+        @media (max-width: 860px) {
+            .guide-banner { grid-template-columns: 1fr; text-align: center; }
+            .guide-banner p { margin: 0 auto; }
+            .guide-langs { justify-content: center; }
+            .guide-banner .btn-guide { justify-self: center; }
+        }
+
+        @media (max-width: 640px) {
+            .billing-toggle button { padding: 9px 16px; font-size: 14px; }
+            .price-card { padding: 30px 24px; }
+            .guide-banner { padding: 30px 22px; }
+        }
     </style>
 </head>
 <body>
@@ -671,8 +1013,9 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="user-guide.html">User Guide</a></li>
                 <li><a href="#why">Why Choose</a></li>
-                <li><a href="#users">Who Uses</a></li>
             </ul>
             <a href="#download" class="cta-button">Download Now</a>
         </nav>
@@ -715,7 +1058,7 @@
                     <p>Offline Support</p>
                 </div>
                 <div class="stat-item">
-                    <h3>2</h3>
+                    <h3>6</h3>
                     <p>Languages</p>
                 </div>
                 <div class="stat-item">
@@ -778,7 +1121,7 @@
                 <div class="feature-card fade-in">
                     <div class="feature-icon">🗣️</div>
                     <h3>Multi-Language</h3>
-                    <p>Available in English and Tamil. Use the app in your preferred language for maximum comfort.</p>
+                    <p>Available in 6 languages — English, Tamil, Hindi, Malayalam, Telugu &amp; Kannada. Use the app in your preferred language for maximum comfort.</p>
                 </div>
             </div>
         </div>
@@ -872,6 +1215,142 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Pricing</span>
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Start free on Google Play, then pick the plan that fits your business. Pay monthly or save with a yearly plan.</p>
+            </div>
+
+            <div class="billing-toggle fade-in" role="tablist">
+                <button type="button" id="billMonthly" class="active">Monthly</button>
+                <button type="button" id="billYearly">Yearly <span class="save-pill">Save up to ₹589</span></button>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="price-card fade-in">
+                    <div class="plan-name">🥉 Base</div>
+                    <p class="plan-desc">For individual agents getting started with digital collection.</p>
+                    <div class="price-line">
+                        <span class="price-amount" data-monthly="₹149" data-yearly="₹1,499">₹149</span>
+                        <span class="price-period" data-monthly="/month" data-yearly="/year">/month</span>
+                    </div>
+                    <div class="price-note" data-monthly="billed monthly" data-yearly="≈ ₹125/month · <span class='save-txt'>save ₹289 a year</span>">billed monthly</div>
+                    <ul class="plan-features">
+                        <li>Up to 5 collections</li>
+                        <li>Up to 20 customers per collection</li>
+                        <li>Loans, EMI recording &amp; daily tracker</li>
+                        <li>Loan PDF download &amp; closed loans</li>
+                        <li>Works 100% offline</li>
+                        <li>6 app languages</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.ksp.vasoolbook" target="_blank" class="plan-cta">Get Base</a>
+                </div>
+
+                <div class="price-card popular fade-in">
+                    <span class="popular-tag">⭐ Most Popular</span>
+                    <div class="plan-name">🥈 Premium</div>
+                    <p class="plan-desc">For growing finance businesses that need reports, cashflow &amp; backups.</p>
+                    <div class="price-line">
+                        <span class="price-amount" data-monthly="₹249" data-yearly="₹2,499">₹249</span>
+                        <span class="price-period" data-monthly="/month" data-yearly="/year">/month</span>
+                    </div>
+                    <div class="price-note" data-monthly="billed monthly" data-yearly="≈ ₹208/month · <span class='save-txt'>save ₹489 a year</span>">billed monthly</div>
+                    <ul class="plan-features">
+                        <li class="inherit">Everything in Base, plus:</li>
+                        <li>Unlimited collections &amp; customers</li>
+                        <li>Monthly (Interest) loan type</li>
+                        <li>Quick-pay EMI from customer list</li>
+                        <li>Monthly &amp; weekly reports with PDF</li>
+                        <li>CashFlow Book</li>
+                        <li>Manual backup &amp; restore</li>
+                        <li>Share loan PDF with company logo</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.ksp.vasoolbook" target="_blank" class="plan-cta">Get Premium</a>
+                </div>
+
+                <div class="price-card fade-in">
+                    <div class="plan-name">💎 Diamond</div>
+                    <p class="plan-desc">The complete toolkit — automation, maps, exports &amp; priority support.</p>
+                    <div class="price-line">
+                        <span class="price-amount" data-monthly="₹299" data-yearly="₹2,999">₹299</span>
+                        <span class="price-period" data-monthly="/month" data-yearly="/year">/month</span>
+                    </div>
+                    <div class="price-note" data-monthly="billed monthly" data-yearly="≈ ₹250/month · <span class='save-txt'>save ₹589 a year</span>">billed monthly</div>
+                    <ul class="plan-features">
+                        <li class="inherit">Everything in Premium, plus:</li>
+                        <li>Bulk EMI update (one-shot entries)</li>
+                        <li>Export to Excel/CSV</li>
+                        <li>Customer Map &amp; navigate to customer</li>
+                        <li>Daily automatic Google Drive backup</li>
+                        <li>Reorder customers (route order)</li>
+                        <li>Advanced reports</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.ksp.vasoolbook" target="_blank" class="plan-cta">Get Diamond</a>
+                </div>
+            </div>
+
+            <p class="pricing-footnote fade-in">Pay via Google Play, UPI, or discounted offline activation codes. Refer &amp; Earn: get ₹100 per successful referral. <a href="user-guide.html#subscription-plans">Learn more in the User Guide →</a></p>
+
+            <!-- Full plan comparison -->
+            <div class="compare-wrap fade-in">
+                <h3>Compare all plans</h3>
+                <div class="compare-scroll">
+                <table>
+                    <thead>
+                        <tr><th>Feature</th><th>Base</th><th>Premium</th><th>Diamond</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="price-row"><td>Price (monthly / yearly)</td><td>₹149 / ₹1,499</td><td>₹249 / ₹2,499</td><td>₹299 / ₹2,999</td></tr>
+                        <tr><td>Collections</td><td>Up to 5</td><td>Unlimited</td><td>Unlimited</td></tr>
+                        <tr><td>Customers per collection</td><td>Up to 20</td><td>Unlimited</td><td>Unlimited</td></tr>
+                        <tr><td>Loans, EMI recording, daily tracker</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Loan PDF download, closed loans</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Monthly (Interest) collection type</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Quick-pay EMI from customer list</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Share loan PDF / company logo on PDF</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Monthly &amp; weekly reports + PDFs</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>CashFlow Book</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Manual Backup &amp; Restore</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Bulk EMI Update</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+                        <tr><td>Export to Excel/CSV</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+                        <tr><td>Reorder customers (route order)</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+                        <tr><td>Daily automatic Google Drive backup</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+                        <tr><td>Customer Map &amp; navigate to location</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+                        <tr><td>Advanced Reports</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+                        <tr><td>Priority support</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Guide Banner -->
+    <section id="guide" style="padding: 0 0 100px;">
+        <div class="container">
+            <div class="guide-banner fade-in">
+                <div>
+                    <span class="section-tag">📖 User Guide</span>
+                    <h3>Learn VasoolBook, step by step</h3>
+                    <p>A complete guide covering every feature — collections, loans, EMI collection, reports, backups, security and more — available in 6 languages.</p>
+                    <div class="guide-langs">
+                        <a href="user-guide.html?lang=en">English</a>
+                        <a href="user-guide.html?lang=ta">தமிழ்</a>
+                        <a href="user-guide.html?lang=hi">हिंदी</a>
+                        <a href="user-guide.html?lang=ml">മലയാളം</a>
+                        <a href="user-guide.html?lang=te">తెలుగు</a>
+                        <a href="user-guide.html?lang=kn">ಕನ್ನಡ</a>
+                    </div>
+                </div>
+                <a href="user-guide.html" class="btn-guide">Open the User Guide →</a>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section id="download" class="cta-section">
         <div class="container">
@@ -910,26 +1389,23 @@
                     <h4>Product</h4>
                     <ul>
                         <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#download">Download</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Updates</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQs</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                        <li><a href="user-guide.html#faq">FAQs</a></li>
+                        <li><a href="user-guide.html#subscription-plans">Plans &amp; Upgrades</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Security</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
@@ -976,20 +1452,25 @@
         if (screenshotImg) {
             screenshotImg.src = 'Frame_10.png';
         }
+
+        // Pricing: monthly / yearly toggle
+        const billMonthly = document.getElementById('billMonthly');
+        const billYearly = document.getElementById('billYearly');
+
+        function setBilling(mode) {
+            billMonthly.classList.toggle('active', mode === 'monthly');
+            billYearly.classList.toggle('active', mode === 'yearly');
+            document.querySelectorAll('.price-amount, .price-period').forEach(el => {
+                el.textContent = el.getAttribute('data-' + mode);
+            });
+            document.querySelectorAll('.price-note').forEach(el => {
+                el.innerHTML = el.getAttribute('data-' + mode);
+            });
+        }
+
+        billMonthly.addEventListener('click', () => setBilling('monthly'));
+        billYearly.addEventListener('click', () => setBilling('yearly'));
     </script>
 
-    <footer>
-  <!-- existing footer content -->
-
-  <p>
-    <a href="https://nativeappsdeveloper.github.io/VasoolBook-WebSite/privacy-policy.html">
-      Privacy Policy
-    </a>
-    &nbsp;|&nbsp;
-    <a href="https://nativeappsdeveloper.github.io/VasoolBook-WebSite/terms.html">
-      Terms of Service
-    </a>
-  </p>
-</footer>
 </body>
 </html>
